@@ -1,0 +1,11 @@
+services:
+  frontend:
+    build: frontend
+    image: paulbrodner/frontend
+    ports:
+      - 80:80
+    depends_on:
+      - backend
+  backend:
+    build: backend
+    image: paulbrodner/backend
